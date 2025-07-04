@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node --watch src/server.js"
+    "dev": "node --watch src/server.js",
+    "dev:stream:csv": "node --watch src/streams/csv-http-server.js"
   },
   "author": "",
   "license": "ISC",
