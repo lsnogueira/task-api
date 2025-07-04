@@ -23,8 +23,6 @@ export class Database {
     let data = this.#database[table] ?? [];
 
     if (search) {
-      console.log({ search });
-
       data = data.filter((row) => {
         return Object.entries(search).some(([key, value]) => {
           return row[key].toLowerCase().includes(value.toLowerCase());
@@ -52,7 +50,6 @@ export class Database {
 
     if (rowIndex > -1) {
       this.#database[table][rowIndex] = {
-        ...this.#database[table][rowIndex],
         id,
         ...data,
       };
